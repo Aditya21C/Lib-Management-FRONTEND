@@ -1,0 +1,99 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Center the login form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+background-color: white;}
+
+/* Login Container */
+.login-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+/* Title */
+h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #555;
+}
+
+/* Input fields */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Login button */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Error Message */
+#error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Register Link */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#register-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#register-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+    }
+}

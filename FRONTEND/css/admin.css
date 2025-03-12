@@ -1,0 +1,206 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.dashboard-summary {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.summary-box {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Status Styling */
+.status-available {
+    color: green;
+    font-weight: bold;
+}
+.dashboard-summary {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.summary-box {
+    background: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.return-btn {
+    background: green;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.return-btn:hover {
+    background: darkgreen;
+}
+
+
+.status-issued {
+    color: red;
+    font-weight: bold;
+}
+
+.disabled-btn {
+    background: gray;
+    cursor: not-allowed;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+/* Center and style the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+background-color: white;}
+
+/* Admin Dashboard Container */
+.admin-container {
+    margin-top:300px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+}
+
+/* Title */
+h2 { margin-top:110px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Admin Sections */
+.admin-actions {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h3 {
+    margin-bottom: 10px;
+    color: #0056b3;
+}
+
+/* Input Fields */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Logout Button */
+button.logout-btn {
+    background: red;
+    margin-top: 20px;
+}
+
+button.logout-btn:hover {
+    background: darkred;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+/* Delete Buttons */
+.delete-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .admin-container {
+        width: 95%;
+    }
+
+    input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard | Library System</title>
+    <link rel="stylesheet" href="css/member.css">
+</head>
+<body>
+    <div class="member-container">
+        <h2>Member Dashboard</h2>
+
+        <!-- 🔹 Member Stats -->
+        <div class="dashboard-summary">
+            <div class="summary-box">📖 Books Issued: <span id="member-issued-books">0</span></div>
+        </div>
+
+        <!-- 🔹 Available Books Section -->
+        <div class="member-actions">
+            <h3>Available Books</h3>
+            <input type="text" id="member-search" placeholder="Search by title or author" onkeyup="filterBooks('member-search', 'available-books-table')">
+            <table id="available-books-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- 🔹 Issued Books Section -->
+        <div class="member-actions">
+            <h3>Issued Books</h3>
+            <table id="issued-books-table">
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <button class="return-btn" onclick="window.location.href='bookreturn.html'">Return Book</button>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="js/member.js"></script>
+</body>
+</html>
