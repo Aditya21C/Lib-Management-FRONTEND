@@ -1,114 +1,51 @@
-/* Reset and Global Styles */
+/* Reset default margins and paddings */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-.dashboard-summary {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
 }
 
-.summary-box {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Status Styling */
-.status-available {
-    color: green;
-    font-weight: bold;
-}
-.dashboard-summary {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px 0;
-}
-
-.summary-box {
-    background: #007bff;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-.return-btn {
-    background: green;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.return-btn:hover {
-    background: darkgreen;
-}
-
-
-.status-issued {
-    color: red;
-    font-weight: bold;
-}
-
-.disabled-btn {
-    background: gray;
-    cursor: not-allowed;
-    border: none;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-
-
-/* Center and style the page */
+/* Center the admin dashboard */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-background-color: white;}
+    min-height: 100vh;
+    background-color: #eef2f7;
+    padding: 10px;
+    overflow: auto;
+}
 
 /* Admin Dashboard Container */
 .admin-container {
-    margin-top:300px;
-    background: white;
+    background: #ffffff;
     padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    width: 80%;
-    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px;
     text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.admin-container:hover {
+    transform: scale(1.01);
 }
 
 /* Title */
-h2 { margin-top:110px;
+h2 {
     margin-bottom: 15px;
-    color: #333;
+    color: #222;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 /* Admin Sections */
 .admin-actions {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 5px;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 8px;
     background: #f9f9f9;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -117,45 +54,61 @@ h2 { margin-top:110px;
 h3 {
     margin-bottom: 10px;
     color: #0056b3;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 /* Input Fields */
 input {
-    width: 90%;
-    padding: 10px;
-    margin: 5px 0;
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
 
 /* Buttons */
 button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background: #007bff;
+    padding: 12px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
 button:hover {
-    background: #0056b3;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px rgba(0, 91, 187, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 /* Logout Button */
-button.logout-btn {
-    background: red;
-    margin-top: 20px;
+.logout-btn {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+    margin-top: 12px;
 }
 
-button.logout-btn:hover {
-    background: darkred;
+.logout-btn:hover {
+    background: linear-gradient(135deg, #b02a37, #8a1f2a);
 }
 
 /* Table */
@@ -165,33 +118,36 @@ table {
     margin-top: 10px;
     background: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ccc;
     text-align: left;
+    font-size: 14px;
 }
 
 th {
     background: #007bff;
     color: white;
+    font-weight: 700;
 }
 
 /* Delete Buttons */
 .delete-btn {
-    background: red;
+    background: linear-gradient(135deg, #dc3545, #b02a37);
     color: white;
     border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s;
 }
 
 .delete-btn:hover {
-    background: darkred;
+    background: linear-gradient(135deg, #b02a37, #8a1f2a);
 }
 
 /* Responsive Design */
@@ -199,8 +155,5 @@ th {
     .admin-container {
         width: 95%;
     }
-
-    input {
-        width: 100%;
-    }
 }
+
