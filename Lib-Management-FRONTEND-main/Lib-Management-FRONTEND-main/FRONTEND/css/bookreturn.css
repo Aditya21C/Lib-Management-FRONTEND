@@ -1,0 +1,142 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+/* Center the return form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eef2f7;
+    padding: 10px;
+}
+
+/* Book Return Container */
+.return-container {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.return-container:hover {
+    transform: scale(1.01);
+}
+
+/* Section Titles */
+h3 {
+    margin-bottom: 15px;
+    color: #0056b3;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 15px;
+}
+
+th {
+    background: #007bff;
+    color: white;
+    font-weight: 700;
+}
+
+/* Buttons */
+button {
+    padding: 12px;
+    margin-top: 15px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px rgba(0, 91, 187, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Return Button */
+.return-btn {
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+}
+
+.return-btn:hover {
+    background: linear-gradient(135deg, #1e7e34, #155d27);
+}
+
+/* Logout Button */
+.logout-btn {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+    margin-top: 15px;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #b02a37, #8a1f2a);
+}
+
+/* Back Button */
+.back-btn {
+    background: linear-gradient(135deg, #ff9800, #e68900);
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, box-shadow 0.1s;
+}
+
+.back-btn:hover {
+    background: linear-gradient(135deg, #e68900, #cc7700);
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px rgba(204, 119, 0, 0.2);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .return-container {
+        width: 100%;
+        padding: 30px;
+    }
+}

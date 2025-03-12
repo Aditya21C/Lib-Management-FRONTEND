@@ -1,0 +1,205 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+/* Center the staff dashboard */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #eef2f7;
+    padding: 10px;
+    overflow: auto;
+}
+
+/* Staff Dashboard Container */
+.staff-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 750px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.staff-container:hover {
+    transform: scale(1.01);
+}
+
+/* Title */
+h2 {
+    margin-bottom: 15px;
+    color: #222;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Dashboard Summary Section */
+.dashboard-summary {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.summary-box {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.summary-box span {
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Staff Actions (Manage Books and Issued Books Sections) */
+.staff-actions {
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+h3 {
+    margin-bottom: 10px;
+    color: #0056b3;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Buttons */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px rgba(0, 91, 187, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Logout Button */
+.logout-btn {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+    margin-top: 12px;
+}
+
+.logout-btn:hover {
+    background: linear-gradient(135deg, #b02a37, #8a1f2a);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #007bff;
+    color: white;
+    font-weight: 700;
+}
+
+/* Delete Buttons */
+.delete-btn {
+    background: linear-gradient(135deg, #dc3545, #b02a37);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #b02a37, #8a1f2a);
+}
+
+/* Return Buttons */
+.return-btn {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.return-btn:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .staff-container {
+        width: 95%;
+    }
+
+    .dashboard-summary {
+        flex-direction: column;
+    }
+
+    .summary-box {
+        margin: 5px 0;
+    }
+}

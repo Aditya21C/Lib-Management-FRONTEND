@@ -1,0 +1,128 @@
+/* Reset default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Poppins', Arial, sans-serif;
+}
+
+/* Center the login form */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #eef2f7;
+    padding: 20px;
+}
+
+/* Login Container */
+.login-container {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-container:hover {
+    transform: scale(1.02);
+}
+
+/* Title */
+h2 {
+    margin-bottom: 25px;
+    color: #222;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Labels */
+label {
+    display: block;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #333;
+}
+
+/* Input fields */
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+/* Login button */
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 25px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-3px);
+    box-shadow: 0px 5px 15px rgba(0, 91, 187, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Error Message */
+#error-message {
+    color: red;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Register Link */
+p {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #555;
+}
+
+#register-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+#register-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        padding: 35px;
+    }
+}

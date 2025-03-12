@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Library System</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>Admin Dashboard</h2>
+
+        <!-- 🔹 Dashboard Summary Section -->
+        <div class="dashboard-summary">
+            <div class="summary-box">📚 Total Books: <span id="total-books">0</span></div>
+            <div class="summary-box">👥 Total Members: <span id="total-members">0</span></div>
+            <div class="summary-box">📖 Issued Books: <span id="total-issued">0</span></div>
+        </div>
+
+        <!-- 🔹 Manage Books Section -->
+        <div class="admin-actions">
+            <h3>Manage Books</h3>
+            <input type="text" id="admin-search" placeholder="Search by title or author" onkeyup="filterBooks('admin-search', 'book-table')">
+            <table id="book-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- 🔹 Manage Members Section -->
+        <div class="admin-actions">
+            <h3>Manage Members</h3>
+            <table id="member-table">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- 🔹 Issued Books Section -->
+        <div class="admin-actions">
+            <h3>Issued Books</h3>
+            <table id="issued-books-table">
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Issued To</th>
+                        <th>Due Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>

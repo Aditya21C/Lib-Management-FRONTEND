@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard | Library System</title>
+    <link rel="stylesheet" href="css/staff.css">
+</head>
+<body>
+    <div class="staff-container">
+        <h2>Staff Dashboard</h2>
+
+        <!-- 🔹 Dashboard Summary Section -->
+        <div class="dashboard-summary">
+            <div class="summary-box">📚 Total Books: <span id="total-books">0</span></div>
+            <div class="summary-box">👥 Total Members: <span id="total-members">0</span></div>
+            <div class="summary-box">📖 Issued Books: <span id="total-issued">0</span></div>
+        </div>
+
+        <!-- 🔹 Manage Books Section -->
+        <div class="staff-actions">
+            <h3>Manage Books</h3>
+            <input type="text" id="staff-search" placeholder="Search by title or author" onkeyup="filterBooks('staff-search', 'book-table')">
+            <table id="book-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        
+
+        <!-- 🔹 Issued Books Section -->
+        <div class="staff-actions">
+            <h3>Issued Books</h3>
+            <table id="issued-books-table">
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Issued To</th>
+                        <th>Due Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="js/staff.js"></script>
+</body>
+</html>
